@@ -52,17 +52,29 @@ Passing this string to console.log should show something like this:
 When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height. */
 
 function chessboard(n){
-    let size = n;
-    let line = ' ';
-    for(i=0;i<n;i++) {
-        if (i % 2 == 0) {
-            line += '#';
+    for(line=1; line<=n; line++){
+        if (line % 2 == 0){
+            let lineOdd = '#';
+            for(i=0;i<n;i++) {
+                if (i % 2 == 0) {
+                    lineOdd += ' ';
+                } else {
+                    lineOdd += '#';
+                }
+            }
+            console.log(lineOdd)
         } else {
-            line += ' ';
+            let lineEven = ' ';
+            for(i=0; i<n; i++) {
+                if (i % 2 == 0) {
+                    lineEven += '#';
+                } else {
+                    lineEven += ' ';
+                }
+            }
+            console.log(lineEven)
         }
-    }
-    line += '/n HOLA'
-    console.log(line)
-}
 
-chessboard(8)
+    }
+
+}
