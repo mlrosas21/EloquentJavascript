@@ -74,5 +74,6 @@ function chessboard(n){
             }
             console.log(lineEven)
         }
+
     }
 }
